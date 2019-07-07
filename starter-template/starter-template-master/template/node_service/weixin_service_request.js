@@ -19,7 +19,6 @@ http.createServer(function(request,response){
        }) 
     }
     if(params.operation == "userInfo"){
-        console.log(params.operation);
       https.get(`https://api.weixin.qq.com/sns/userinfo?access_token=${params.access_token}&openid=${params.openid}`,function(res){
           res.on("data",function(chunk){
             response.writeHead(200,{'Content-Type':'application/json;charset=utf-8' ,"Access-Control-Allow-Origin":"*" })
