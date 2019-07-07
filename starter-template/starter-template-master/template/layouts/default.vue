@@ -30,8 +30,8 @@
         <span class="btn-search fa fa-search"></span> 
        </form> 
        <div class="sui-nav pull-right info" v-if="pojo.user_name != undefined"> 
-        <li><a href="/" target="_blank" class="notice">{{ pojo.user_name }}</a></li> 
-        <li><a :href="pojo.user_icon" target="_blank" class="homego"><img :src="pojo.user_icon" alt="用户头像" /></a></li> 
+        <li><a href="/manager" target="_blank" class="notice">{{ pojo.user_name }}</a></li> 
+        <li><a href="/manager" target="_blank" class="homego"><img :src="pojo.user_icon" alt="用户头像" /></a></li> 
                 <li><a  @click="logout" target="_blank" class="homego">退出登陆</a></li> 
 
        </div> 
