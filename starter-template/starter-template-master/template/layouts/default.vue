@@ -29,10 +29,16 @@
         <input type="text" placeholder="输入关键词..." /> 
         <span class="btn-search fa fa-search"></span> 
        </form> 
-       <div class="sui-nav pull-right info"> 
-        <li><a href="~/assets/other-notice.html" target="_blank" class="notice">小强</a></li> 
-        <li><a href="~/assets/person-homepage.html" target="_blank" class="homego"><img src="~/assets/img/widget-photo.png" alt="用户头像" /></a></li> 
+       <div class="sui-nav pull-right info" v-if="pojo.user_name != undefined"> 
+        <li><a href="/" target="_blank" class="notice">{{ pojo.user_name }}</a></li> 
+        <li><a :href="pojo.user_icon" target="_blank" class="homego"><img :src="pojo.user_icon" alt="用户头像" /></a></li> 
+                <li><a  @click="logout" target="_blank" class="homego">退出登陆</a></li> 
+
        </div> 
+       <div class="sui-nav pull-right info" v-else> 
+       <li> <nuxt-link to="/persion"> <a href="/" target="_blank">注册</a></nuxt-link></li> 
+       <li><nuxt-link to="/persion"><a href="/" target="_blank" class="sui-btn btn-login">登录</a></nuxt-link></li>  
+      </div> 
       </div> 
      </div> 
 	
@@ -126,8 +132,24 @@ import "~/assets//plugins/sui/sui-append.min.css"
 import "~/assets//plugins/font-awesome/css/font-awesome.min.css"
 import "~/assets//css/widget-base.css"
 import "~/assets//css/widget-head-foot.css"
-
+import { cookiesGet ,cookiesRemove} from "@/utils/auth"
 export default {
+   data(){
+     return {
+       pojo:{}
+     }
+   },
+  created(){
+     this.pojo = cookiesGet();
+    
+  },
+  methods:{
+     logout(){
+      
+       cookiesRemove();
+       location.href="/"
+     }
+  }
   
 }
 </script>
