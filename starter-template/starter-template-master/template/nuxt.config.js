@@ -15,6 +15,11 @@ module.exports = {
   },
   plugins:[
     { src:'~plugins/vue-infinite-scroll.js' ,ssr: false},
+    { src:'~plugins/element_ui.js' ,ssr: false},
+  ],
+  
+  css:[
+       "element-ui/lib/theme-chalk/index.css"
   ],
 
   /*

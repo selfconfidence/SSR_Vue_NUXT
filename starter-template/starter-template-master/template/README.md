@@ -1,6 +1,6 @@
-# {{ name }}
+# SSR-Project
 
-> {{ description }}
+> 是一种服务端渲染技术 + vue
 
 ## Build Setup
 
