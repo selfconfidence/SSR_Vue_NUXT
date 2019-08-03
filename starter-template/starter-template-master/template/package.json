@@ -4,9 +4,9 @@
   "description": "nuxt技术衔接",
   "author": "mister_wei",
   "private": true,
-  "config":   {  
-    "nuxt":{
-      "port":"80"
+  "config": {
+    "nuxt": {
+      "port": "80"
     }
   },
   "scripts": {
@@ -23,7 +23,9 @@
     "element-ui": "^2.10.1",
     "js-cookie": "^2.2.0",
     "nuxt": "^2.0.0",
-    "vue-infinite-scroll": "^2.0.2"
+    "vue-infinite-scroll": "^2.0.2",
+    "vue-quill-editor": "^3.0.6",
+    "vue-quill-editor-upload": "^1.1.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

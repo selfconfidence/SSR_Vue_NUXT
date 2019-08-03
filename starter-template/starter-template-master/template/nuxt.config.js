@@ -14,12 +14,16 @@ module.exports = {
     ]
   },
   plugins:[
-    { src:'~plugins/vue-infinite-scroll.js' ,ssr: false},
+    { src:'~plugins/vue-infinite-scroll' ,ssr: false},
     { src:'~plugins/element_ui.js' ,ssr: false},
+    { src: '~plugins/nuxt-quill-plugin.js', ssr: false }
   ],
   
   css:[
-       "element-ui/lib/theme-chalk/index.css"
+       "element-ui/lib/theme-chalk/index.css",
+       'quill/dist/quill.snow.css',
+       'quill/dist/quill.bubble.css',
+       'quill/dist/quill.core.css'
   ],
 
   /*
